@@ -1,0 +1,22 @@
+<h1>List of Gender</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+
+  <% @genders.each do |gender| %>
+    <tr>
+      <td><%= link_to gender.title, gender %></td>
+      <td>
+        <%= link_to 'Edit', edit_gender_path(gender.id) %>
+        <%= link_to 'Delete', gender, :method => 'delete' %>
+      </td>
+    </tr>
+  <% end -%>
+</table>
+
+<p><%= link_to 'New gender', new_gender_path %></p>

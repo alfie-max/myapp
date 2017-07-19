@@ -1,0 +1,5 @@
+<%= form_for nil do |f| %>
+  <%= form.text_field :name %></br>
+  <%= "Title #{@gender.errors[:name]}" if @gender.errors[:name] %></br>
+  <%= form.submit %>
+<% end -%>
